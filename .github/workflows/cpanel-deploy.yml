@@ -40,7 +40,7 @@ jobs:
           local-dir: ./portfolio_app/
           # The directory on cPanel where the app should be uploaded. 
           # Modify this if your app is hosted in a subfolder or public_html
-          server-dir: /public_html/dineshweerasekara.com/
+          server-dir: /
           # Exclude files you don't want to override on the server
           exclude: |
             **/.git*
