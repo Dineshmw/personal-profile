@@ -298,11 +298,12 @@
                 <div class="self-start bg-gray-700 text-white rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] text-sm shadow-sm border border-gray-600">
                     <!-- Hello! I'm the AI assistant for Dinesh. I will be configured soon to answer your questions regarding his skills, projects, and work experience. How can I help you today? -->
                      <iframe
-                        src="https://huggingface.co/spaces/dineshweerasekara1/chat_with_me"
-                        width="100%"
-                        height="600"
-                        style="border:none;">
-                    </iframe>
+                        src="https://dineshweerasekara1-chat-with-me.hf.space"
+                        frameborder="0"
+                        width="850"
+                        height="450"
+                    ></iframe>
+
                 </div>
             </div>
 
