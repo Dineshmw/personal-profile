@@ -74,7 +74,7 @@
                         Dinesh <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Weerasekara</span>
                     </h1>
                     <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto md:mx-0">
-                        I build dynamic, scalable, and beautiful web applications. Specializing in PHP Laravel, modern frontend frameworks, and robust database architectures.
+                        I build scalable, secure, and high-performance web applications and intelligent data solutions. Specializing in Python, Django, modern APIs, AI/ML
                     </p>
                     <div class="mt-10 flex justify-center md:justify-start gap-4">
                         <a href="#projects" class="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
@@ -176,7 +176,7 @@
     <!-- Footer -->
     <footer class="bg-gray-950 py-8 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            <p>&copy; {{ date('Y') }} Dinesh Weerasekara. Built with Laravel & Tailwind CSS.</p>
+            <p>&copy; {{ date('Y') }} Dinesh Weerasekara. All rights reserved.</p>
         </div>
     </footer>
 
