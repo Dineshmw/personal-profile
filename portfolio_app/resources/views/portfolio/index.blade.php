@@ -233,7 +233,87 @@
                     });
                 });
             });
+
+            // Chatbot Toggle Logic
+            const toggleBtn = document.getElementById('toggle-chatbot');
+            const closeBtn = document.getElementById('close-chatbot');
+            const chatWindow = document.getElementById('chatbot-window');
+            const iconOpen = document.getElementById('chatbot-icon-open');
+            const iconClose = document.getElementById('chatbot-icon-close');
+
+            function toggleChat() {
+                const isHidden = chatWindow.classList.contains('hidden');
+                
+                if (isHidden) {
+                    // Open
+                    chatWindow.classList.remove('hidden');
+                    // Small delay for CSS transition
+                    setTimeout(() => {
+                        chatWindow.classList.remove('scale-95', 'opacity-0');
+                        chatWindow.classList.add('scale-100', 'opacity-100');
+                    }, 10);
+                    iconOpen.classList.add('hidden');
+                    iconClose.classList.remove('hidden');
+                } else {
+                    // Close
+                    chatWindow.classList.remove('scale-100', 'opacity-100');
+                    chatWindow.classList.add('scale-95', 'opacity-0');
+                    
+                    iconClose.classList.add('hidden');
+                    iconOpen.classList.remove('hidden');
+                    
+                    // Wait for transition before hiding
+                    setTimeout(() => {
+                        chatWindow.classList.add('hidden');
+                    }, 300);
+                }
+            }
+
+            toggleBtn.addEventListener('click', toggleChat);
+            closeBtn.addEventListener('click', toggleChat);
         });
     </script>
+
+    <!-- Chatbot Popup Widget -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <!-- Chat Window (Initially Hidden) -->
+        <div id="chatbot-window" class="hidden w-80 sm:w-96 bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden mb-4 transition-all duration-300 transform origin-bottom-right scale-95 opacity-0">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-primary to-accent p-4 flex justify-between items-center text-white">
+                <div class="flex items-center gap-3">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                    <div>
+                        <h3 class="font-bold text-sm">AI Assistant</h3>
+                        <p class="text-xs text-blue-200">Online</p>
+                    </div>
+                </div>
+                <button id="close-chatbot" class="text-white hover:text-gray-200 focus:outline-none transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Chat Area -->
+            <div id="chatbot-messages" class="h-80 p-4 bg-gray-800 overflow-y-auto flex flex-col gap-4">
+                <!-- Message Placeholder -->
+                <div class="self-start bg-gray-700 text-white rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] text-sm shadow-sm border border-gray-600">
+                    Hello! I'm the AI assistant for Dinesh. I will be configured soon to answer your questions regarding his skills, projects, and work experience. How can I help you today?
+                </div>
+            </div>
+
+            <!-- Input Area Placeholder -->
+            <div class="p-3 bg-gray-900 border-t border-gray-700 flex gap-2">
+                <input type="text" placeholder="Type your message..." disabled class="flex-1 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 text-sm rounded-lg focus:ring-primary focus:border-primary block px-3 py-2 cursor-not-allowed">
+                <button disabled class="bg-primary hover:bg-blue-600 text-white p-2 rounded-lg transition-colors cursor-not-allowed opacity-50 flex items-center justify-center">
+                    <svg class="w-5 h-5 transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Toggle Button -->
+        <button id="toggle-chatbot" class="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/40 text-white p-4 rounded-full shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-primary">
+            <svg id="chatbot-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+            <svg id="chatbot-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </div>
 </body>
 </html>
