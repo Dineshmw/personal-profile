@@ -300,8 +300,8 @@
                      <iframe
                         src="https://dineshweerasekara1-chat-with-me.hf.space"
                         frameborder="0"
-                        width="850"
-                        height="450"
+                        width="380"
+                        height="320"
                     ></iframe>
 
                 </div>
