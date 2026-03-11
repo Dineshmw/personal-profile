@@ -296,7 +296,13 @@
             <div id="chatbot-messages" class="h-80 p-4 bg-gray-800 overflow-y-auto flex flex-col gap-4">
                 <!-- Message Placeholder -->
                 <div class="self-start bg-gray-700 text-white rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] text-sm shadow-sm border border-gray-600">
-                    Hello! I'm the AI assistant for Dinesh. I will be configured soon to answer your questions regarding his skills, projects, and work experience. How can I help you today?
+                    <!-- Hello! I'm the AI assistant for Dinesh. I will be configured soon to answer your questions regarding his skills, projects, and work experience. How can I help you today? -->
+                     <iframe
+                        src="https://huggingface.co/spaces/dineshweerasekara1/chat_with_me"
+                        width="100%"
+                        height="600"
+                        style="border:none;">
+                    </iframe>
                 </div>
             </div>
 
