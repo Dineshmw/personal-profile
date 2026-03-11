@@ -293,26 +293,13 @@
             </div>
             
             <!-- Chat Area -->
-            <div id="chatbot-messages" class="h-80 p-4 bg-gray-800 overflow-y-auto flex flex-col gap-4">
+            <div id="chatbot-messages" class="h-[500px] bg-gray-900 border-none overflow-hidden flex flex-col">
                 <iframe
                         src="https://dineshweerasekara1-chat-with-me.hf.space"
                         frameborder="0"
-                        width="360"
-                        height="500"
+                        class="w-full h-full flex-1"
+                        style="background: transparent;"
                     ></iframe>    
-            <!-- Message Placeholder -->
-                <!-- <div class="self-start bg-gray-700 text-white rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] text-sm shadow-sm border border-gray-600">
-             Hello! I'm the AI assistant for Dinesh. I will be configured soon to answer your questions regarding his skills, projects, and work experience. How can I help you today?
-            
-                </div> -->
-            </div>
-
-            <!-- Input Area Placeholder -->
-            <div class="p-3 bg-gray-900 border-t border-gray-700 flex gap-2">
-                <!-- <input type="text" placeholder="Type your message..." disabled class="flex-1 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 text-sm rounded-lg focus:ring-primary focus:border-primary block px-3 py-2 cursor-not-allowed">
-                <button disabled class="bg-primary hover:bg-blue-600 text-white p-2 rounded-lg transition-colors cursor-not-allowed opacity-50 flex items-center justify-center">
-                    <svg class="w-5 h-5 transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                </button> -->
             </div>
         </div>
 
