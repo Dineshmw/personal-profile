@@ -167,7 +167,7 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Work Together</h2>
             <p class="text-gray-400 mb-10 text-lg">Interested in collaborating or have a project in mind? I'm currently open for new opportunities.</p>
-            <a href="mailto:contact@dineshweerasekara.com" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-full text-white bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1">
+            <a href="mailto:dineshweerasekara1@gmail.com" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-full text-white bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1">
                 Say Hello
             </a>
         </div>
